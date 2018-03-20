@@ -15,8 +15,8 @@ class CreateDirectorMovie extends Migration
     {
         Schema::create('director_movie', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('movie_id')->unsigned;
-            $table->integer('director_id')->unsigned;
+            $table->integer('movie_id')->unsigned();
+            $table->integer('director_id')->unsigned();
             $table->timestamps();
         });
     }
