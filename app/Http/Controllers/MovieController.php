@@ -86,7 +86,7 @@ class MovieController extends Controller
     {
         $movies->Title = $request->input('title');
         $movies->Picture =$request->input('picture');
-        $movies->ReleasDate = $request->input('releasedate');
+        $movies->ReleaseDate = $request->input('releasedate');
         $movies->Runtime = $request->input('runtime');
         $movies->director_id = $request->input('director');
         $movies->actor_id = $request->input('actor');
