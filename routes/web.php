@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Routes for the actor MVC part
+//Routes for the actors and directors MVC part
 //created by Radhika Sonawane
 Route::get('/actors', 'actorController@index')->name('actors.index');
 Route::get('/actors/create', 'actorController@create')->name('actors.create');
