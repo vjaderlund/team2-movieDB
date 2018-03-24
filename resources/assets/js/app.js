@@ -4,7 +4,7 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-import VueStarRating  from 'vue-star-rating'
+
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -16,9 +16,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('review-form', require('./components/ReviewForm.vue'));
 
-Vue.component('star-rating', VueStarRating);
 const app = new Vue({
     el: '#app'
 });
