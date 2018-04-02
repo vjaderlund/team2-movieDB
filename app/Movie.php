@@ -10,8 +10,8 @@ class Movie extends Model
         return $this->belongsToMany('App\Actor');
     }
 
-    function directors() {
-        return $this->belongsToMany('App\Director');
+    function director() {
+        return $this->belongsTo('App\Director');
     }
 
     function genres() {

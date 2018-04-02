@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/', 'MovieController@index')->name('home');
 
 Auth::routes();
 
@@ -25,7 +25,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/movies', 'movieController@index')->name('movies.index');
 Route::get('/movies/create', 'movieController@create')->name('movies.create');
 Route::post('/movies', 'movieController@store')->name('movies.store');
-
 Route::get('/movies/{movie}/edit', 'movieController@edit')->name('movies.edit');
 Route::get('/movies/{movie}', 'movieController@show')->name('movies.show');
 Route::post('/movies/{movie}', 'movieController@update')->name('movies.update');

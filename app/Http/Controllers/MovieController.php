@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Movie;
+use App\Director;
+use App\Genre;
 use Illuminate\Http\Request;
 
 class MovieController extends Controller
@@ -51,14 +53,13 @@ class MovieController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Movie  $movie
-     * @return \Illuminate\Http\Response
+     * @param  Movie  $movie
+     * @return view
      */
-    public function show(Movie $movies)
+    public function show(Movie $movie)
     {
-        $movies->load('director');
 
-        return view('movies.show', ['movie' => $movies]);
+        return view('movies.show', ['movie' => $movie]);
     }
 
     /**
@@ -71,7 +72,6 @@ class MovieController extends Controller
     {
         return view('movies.edit', [
             'movie' => $movies,
-            'directors' => Director::orderBy('name')->get(),
         ]);
     }
 
